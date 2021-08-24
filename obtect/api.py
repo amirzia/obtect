@@ -12,9 +12,9 @@ model = Model()
 
 @app.post("/detect/")
 async def detect_objects(file: UploadFile = File(...)):
+    """Detect objects in an image and return rendered image"""
     img = Image.open(io.BytesIO(await file.read()))
     rendered_img = model.predict_and_render(img)
-    rendered_img = Image.fromarray(rendered_img)
 
     buffer = io.BytesIO()
     rendered_img.save(buffer, format='JPEG')
