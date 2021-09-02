@@ -1,5 +1,5 @@
 
-from model import Model
+from obtect.model import Model
 
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import Response
