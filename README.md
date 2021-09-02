@@ -11,7 +11,7 @@ docker pull amirzia7/ob:0.1.1
 docker run -it -p 8000:80 amirzia7/ob:0.1.1
 ```
 
-### Withut Docker
+### Without Docker
 
 First, you need to start the server:
 
